@@ -520,6 +520,16 @@ struct Dual
     {
     }
 
+    Dual(Dual& v) = default;
+    Dual(const Dual& v) = default;
+
+    Dual(Dual&& v) = default;
+
+    Dual& operator=(Dual& v) = default;
+    Dual& operator=(const Dual& v) = default;
+
+    Dual& operator=(Dual&& v) = default;
+
     Dual(const NumericType<T>& val)
     : val(val), grad(0)
     {
